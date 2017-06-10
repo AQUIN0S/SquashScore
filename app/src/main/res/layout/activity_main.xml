@@ -13,39 +13,40 @@
         <LinearLayout style="@style/player_layouts">
 
             <TextView
-                android:text="@string/player_1"
-                style="@style/player_name_style" />
+                style="@style/player_name_style"
+                android:text="@string/player_1" />
 
             <TextView
                 android:id="@+id/score_player_1"
-                android:text="@string/score_player_1"
-                style="@style/score_style" />
+                style="@style/score_style"
+                android:text="@string/score_player_1" />
 
             <Button
-                android:id="@+id/add_point_player_1"
-                android:text="@string/add_point_button"
-                style="@style/score_button_p1_style" />
+                style="@style/score_button_p1_style"
+                android:onClick="addPointPlayer1"
+                android:text="@string/add_point_button" />
 
             <Button
-                android:id="@+id/take_point_player_1"
-                android:text="@string/take_point_button"
-                style="@style/score_button_p1_style" />
+                style="@style/score_button_p1_style"
+                android:onClick="takePointPlayer1"
+                android:text="@string/take_point_button" />
 
             <LinearLayout style="@style/games_layout_style">
 
                 <Button
-                    android:id="@+id/take_game_player_1"
+                    style="@style/game_button_style_p1"
                     android:text="@string/take_point_button"
-                    style="@style/game_button_style_p1" />
+                    android:onClick="takeGamePlayer1"/>
 
                 <TextView
-                    android:text="@string/games_player_1"
-                    style="@style/game_text_style" />
+                    android:id="@+id/games_player_1"
+                    style="@style/game_text_style"
+                    android:text="@string/games_player_1" />
 
                 <Button
-                    android:id="@+id/add_game_player_1"
+                    style="@style/game_button_style_p1"
                     android:text="@string/add_point_button"
-                    style="@style/game_button_style_p1" />
+                    android:onClick="addGamePlayer1" />
 
             </LinearLayout>
 
@@ -54,9 +55,9 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/colorDivider"
+            android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"/>
+            android:background="@color/colorDivider" />
 
         <LinearLayout style="@style/player_layouts">
 
@@ -65,34 +66,36 @@
                 android:text="@string/player_2" />
 
             <TextView
-                android:text="@string/score_player_2"
-                style="@style/score_style" />
+                android:id="@+id/score_player_2"
+                style="@style/score_style"
+                android:text="@string/score_player_2" />
 
             <Button
-                android:id="@+id/add_point_player_2"
-                android:text="@string/add_point_button"
-                style="@style/score_button_p2_style" />
+                style="@style/score_button_p2_style"
+                android:onClick="addPointPlayer2"
+                android:text="@string/add_point_button" />
 
             <Button
-                android:id="@+id/take_point_player_2"
-                android:text="@string/take_point_button"
-                style="@style/score_button_p2_style" />
+                style="@style/score_button_p2_style"
+                android:onClick="takePointPlayer2"
+                android:text="@string/take_point_button" />
 
             <LinearLayout style="@style/games_layout_style">
 
                 <Button
-                    android:id="@+id/take_game_player_2"
+                    style="@style/game_button_style_p2"
                     android:text="@string/take_point_button"
-                    style="@style/game_button_style_p2" />
+                    android:onClick="takeGamePlayer2" />
 
                 <TextView
-                    android:text="@string/games_player_2"
-                    style="@style/game_text_style" />
+                    android:id="@+id/games_player_2"
+                    style="@style/game_text_style"
+                    android:text="@string/games_player_2" />
 
                 <Button
-                    android:id="@+id/add_game_player_2"
+                    style="@style/game_button_style_p2"
                     android:text="@string/add_point_button"
-                    style="@style/game_button_style_p2" />
+                    android:onClick="addGamePlayer2" />
 
             </LinearLayout>
 
@@ -102,14 +105,8 @@
 
     <Button
         android:id="@+id/reset_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/purple"
+        style="@style/reset_button_style"
         android:text="@string/reset_button"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="36dp"/>
+        android:onClick="resetMatch" />
 
 </RelativeLayout>
