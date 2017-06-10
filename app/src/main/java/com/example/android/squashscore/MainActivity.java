@@ -2,10 +2,10 @@ package com.example.android.squashscore;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 import butterknife.ButterKnife;
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,14 +33,16 @@ public class MainActivity extends AppCompatActivity {
      * Methods to change and view Player 1's points.
      */
 
-    public void addPointPlayer1(View view) {
+    @OnClick(R.id.add_point_button_p1)
+    public void addPointPlayer1() {
 
         this.pointsPlayer1 += 1;
         displayPlayer1Points();
 
     }
 
-    public void takePointPlayer1(View view) {
+    @OnClick(R.id.take_point_button_p1)
+    public void takePointPlayer1() {
 
         if (this.pointsPlayer1 <= 0) {
             this.pointsPlayer1 = 0;
@@ -64,14 +66,16 @@ public class MainActivity extends AppCompatActivity {
      * Methods to change and view Player 1's games
      */
 
-    public void addGamePlayer1(View view) {
+    @OnClick(R.id.add_game_button_p1)
+    public void addGamePlayer1() {
 
         this.gamesPlayer1 += 1;
         displayPlayer1Games();
 
     }
 
-    public void takeGamePlayer1(View view) {
+    @OnClick(R.id.take_game_button_p1)
+    public void takeGamePlayer1() {
 
         if (this.gamesPlayer1 <= 0) {
             this.gamesPlayer1 = 0;
@@ -95,14 +99,16 @@ public class MainActivity extends AppCompatActivity {
      * Methods to change and view Player 2's points.
      */
 
-    public void addPointPlayer2(View view) {
+    @OnClick(R.id.add_point_button_p2)
+    public void addPointPlayer2() {
 
         this.pointsPlayer2 += 1;
         displayPlayer2Points();
 
     }
 
-    public void takePointPlayer2(View view) {
+    @OnClick(R.id.take_point_button_p2)
+    public void takePointPlayer2() {
 
         if (this.pointsPlayer2 <= 0) {
             this.pointsPlayer2 = 0;
@@ -126,14 +132,16 @@ public class MainActivity extends AppCompatActivity {
      * Methods to change and view Player 2's games
      */
 
-    public void addGamePlayer2(View view) {
+    @OnClick(R.id.add_game_button_p2)
+    public void addGamePlayer2() {
 
         this.gamesPlayer2 += 1;
         displayPlayer2Games();
 
     }
 
-    public void takeGamePlayer2(View view) {
+    @OnClick(R.id.take_game_button_p2)
+    public void takeGamePlayer2() {
 
         if (this.gamesPlayer2 <= 0) {
             this.gamesPlayer2 = 0;
@@ -157,7 +165,8 @@ public class MainActivity extends AppCompatActivity {
      * Method to reset all values
      */
 
-    public void resetMatch(View view) {
+    @OnClick(R.id.reset_button)
+    public void resetMatch() {
 
         this.pointsPlayer1 = 0;
         this.gamesPlayer1 = 0;
