@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import butterknife.ButterKnife;
+import butterknife.BindView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,10 +14,18 @@ public class MainActivity extends AppCompatActivity {
     private int pointsPlayer2 = 0;
     private int gamesPlayer2 = 0;
 
+    @BindView(R.id.score_player_1) TextView player1PointsView;
+    @BindView(R.id.games_player_1) TextView player1GamesView;
+    @BindView(R.id.score_player_2) TextView player2PointsView;
+    @BindView(R.id.games_player_2) TextView player2GamesView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+
     }
 
 
@@ -44,9 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayPlayer1Points() {
 
-        TextView player1PointsView = (TextView) findViewById(R.id.score_player_1);
         String player1Points = Integer.toString(this.pointsPlayer1);
-        player1PointsView.setText(player1Points);
+        this.player1PointsView.setText(player1Points);
 
     }
 
@@ -76,9 +85,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayPlayer1Games() {
 
-        TextView player1GamesView = (TextView) findViewById(R.id.games_player_1);
         String player1Games = "Games: " + Integer.toString(this.gamesPlayer1);
-        player1GamesView.setText(player1Games);
+        this.player1GamesView.setText(player1Games);
 
     }
 
@@ -108,9 +116,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayPlayer2Points() {
 
-        TextView player2PointsView = (TextView) findViewById(R.id.score_player_2);
         String player2Points = Integer.toString(this.pointsPlayer2);
-        player2PointsView.setText(player2Points);
+        this.player2PointsView.setText(player2Points);
 
     }
 
@@ -140,9 +147,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayPlayer2Games() {
 
-        TextView player2GamesView = (TextView) findViewById(R.id.games_player_2);
         String player2Games = "Games: " + Integer.toString(this.gamesPlayer2);
-        player2GamesView.setText(player2Games);
+        this.player2GamesView.setText(player2Games);
 
     }
 
